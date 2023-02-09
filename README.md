@@ -20,8 +20,25 @@ Make sure you have installed:
 ## Checkout branches
 - Check your current branch with command: `git branch`.
   - In IntelliJ you can check your current branch in the right bottom corner of the screen.
+## Create a branch
+* First switch to the branch ```develop```
+* Let's create and switch to a new branch called ```feature/your-name```
+  * Command line
+    ```
+    CHEATSHEET
+    
+    # Create new branch and switch to it  
+    git checkout -b branch-name
+    
+    # Switch to an existing branch
+    git checkout -b branch-name 
+    ```
+  * IntelliJ
+    * Click on the name of the branch in the bottom right corner
+    * Choose "New branch" and enter the name you wish
+    * You can tick the box "Checkout branch" or if you do not, then find the branch under "Local branches", click it and choose "Checkout".
 ## Add, commit, push, pull changes
-* Create new file in directory ```winteruni/attendance``` following the instructions there.
+* Create new file in directory ```files/file_1.txt``` following the instructions there.
 * When adding a new file IntelliJ will ask if you wish to add it to git - uncheck this option for now.
 * When the file is created we will add it to git, commit the changes and push them to the repository.
 * Notice differences between "tracked" and "untracked" files.
@@ -36,13 +53,14 @@ Make sure you have installed:
     git commit -m "A nice and clear message about what I changed"
   
     # To push commits
+    # NB! Try to never use -force option
     git push
     ```
 * All this can be done via IntelliJ as well.
   * Right click on file or directory, choose "Git" -> "Add"
   * Find "Git" in top menu, and "Commit" to open commit window or "Push" to send all committed changes to repository.
 ## Remove or amend commits
-* Create a new file in directory ```winteruni/attendance```
+* Create a new file in directory ```files/file_2.txt```
 * Commit this file
 * Make a change to the file
 * Amend the previous commit
@@ -94,9 +112,9 @@ then you can add them to a different changelist.
 * The active changelist is the one chosen by default while committing
 * You can choose which changelist to commit, at the top of the commit window
 ## Ignore files
-- Create a file environment.properties
+- Create a new file in directory ```files/file_3.txt```
 - Open file .gitignore
-  - Add a rule to ignore environment.properties file (or files with .properties extension)
+  - Add a rule to ignore the newly created file
   - You need to find a suitable regex pattern to match the file(s) you want
 https://git-scm.com/docs/gitignore
 - Check your changelist
@@ -141,5 +159,8 @@ Tags are references that point to specific commit in Git history. Tagging is gen
   * If you want to check who authored a specific file or change
   * In a file, right-click the area next to the file where you see line numbers and choose ["Annotate with git blame"](!https://pbs.twimg.com/media/E7KHDddXoAMVtPI.jpg)
   * By clicking the name on the line, you can open a window that shows the commit and changes that were made with it
+## If we have time left then we can discuss:
+* Rebasing https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase
+* Remotes 
 #
 Thanks to Krõõt Grete Mänd for the workshop materials.
